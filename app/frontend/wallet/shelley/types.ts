@@ -9,7 +9,7 @@ export type TxAux = {
   inputs: TxInput[]
   outputs: TxOutput[]
   fee: number
-  ttl: number
+  ttl?: number
   certificates: TxCertificate[]
   withdrawals: TxWithdrawal[]
   auxiliaryData: TxAuxiliaryData | null

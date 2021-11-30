@@ -227,7 +227,7 @@ const Account = ({config, cryptoProvider, blockchainExplorer, accountIndex}: Acc
       spendingPath: myAddresses.getAddressToAbsPathMapper()(output.address),
       stakingPath: myAddresses.getAddressToAbsPathMapper()(stakingAddress),
     }))
-    const txTtl = ttl === undefined ? await calculateTtl() : ttl
+    const txTtl = undefined //ttl === undefined ? await calculateTtl() : ttl
     const txValidityIntervalStart = validityIntervalStart ?? null
     const mappedAuxiliaryData = auxiliaryData ? mapAuxiliaryData(auxiliaryData) : null
 

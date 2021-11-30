@@ -306,7 +306,7 @@ const ShelleyBitBox02CryptoProvider = async ({
         inputs,
         outputs,
         fee: txAux.fee.toString(),
-        ttl: txAux.ttl.toString(),
+        ttl: txAux.ttl === undefined ? undefined : txAux.ttl.toString(),
         certificates,
         withdrawals,
         validityIntervalStart,

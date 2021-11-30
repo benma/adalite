@@ -60,7 +60,7 @@ function ShelleyTxAux({
   inputs: TxInput[]
   outputs: TxOutput[]
   fee: number
-  ttl: number
+  ttl?: number
   certificates: TxCertificate[]
   withdrawals: TxWithdrawal[]
   auxiliaryDataHash: HexString | null
@@ -91,7 +91,7 @@ function ShelleyTxAux({
     txBody.set(TxBodyKey.INPUTS, cborizeTxInputs(inputs))
     txBody.set(TxBodyKey.OUTPUTS, cborizeTxOutputs(outputs))
     txBody.set(TxBodyKey.FEE, fee)
-    if (ttl !== null) {
+    if (ttl !== undefined) {
       txBody.set(TxBodyKey.TTL, ttl)
     }
     if (certificates.length) {
